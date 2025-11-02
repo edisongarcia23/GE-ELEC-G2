@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background-image: url('https://scontent.fbag6-1.fna.fbcdn.net/v/t1.15752-9/573601845_1337101488125256_3408770293071964192_n.jpg?stp=dst-jpg_s2048x2048_tt6&_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeGOf-0DAfIKOtRRVMuEex-26aYq3E5NRNLppircTk1E0oq-f-oXii9tRMhb_-4-fqrC0hzCkWUK1157wgCzbmeU&_nc_ohc=ukWTeoujiTEQ7kNvwF2nrGf&_nc_oc=AdmC0l277gFe0pUUJJVV40DieYmHWEkj6VVNuiVjFIBekOBu5wlxXVuIC54Y7MQrbM0&_nc_zt=23&_nc_ht=scontent.fbag6-1.fna&oh=03_Q7cD3gFV7oXuDBSkNnuEOUkGciejJzjLh2bbGguJcYy8DunGIg&oe=692A24AC');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #fff;
+      text-align: center;
+    }
+
+    header {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px 0;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    .team-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px;
+    }
+
+    .card {
+      width: 280px;
+      height: 420px;
+      perspective: 1000px;
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
+
+    .card.is-flipped .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      backface-visibility: hidden;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    }
+
+    .card-front {
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      padding-bottom: 20px;
+    }
+
+    .profile-img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+
+    .profile-name {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .profile-role {
+      font-size: 15px;
+      color: #ffcc00;
+      margin-bottom: 20px;
+    }
+
+    .card-back {
+      background: rgba(0, 0, 0, 0.85);
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 25px;
+      text-align: left;
+    }
+
+    .card-back h3 {
+      font-size: 18px;
+      color: #ffcc00;
+      margin-bottom: 10px;
+    }
+
+    .card-back p {
+      font-size: 14px;
+      color: #eee;
+      line-height: 1.6;
+      margin: 3px 0;
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>Group 2 Portfolio</header>
+
+  <section class="team-container">
+    <!-- Leader -->
+    <div class="card" onclick="this.classList.toggle('is-flipped')">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('https://scontent.fbag6-1.fna.fbcdn.net/v/t1.15752-9/553690381_1107713891577734_3583065128957580323_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeFQg63SqBJwAAglaBNVi4D4oeQGp_SgkOyh5Aan9KCQ7PygWt2ioe1P2TSBpHqCJw2V0yltM6EGwxqMiG_gPPce&_nc_ohc=3X5nWFehrJEQ7kNvwEfwNAL&_nc_oc=AdnndQpRudrUm1rQOWfHzUF0Fo4U7n8TLzUghY-mbFdQpiTJEBPmZSAcC8F1_nxbMNU&_nc_zt=23&_nc_ht=scontent.fbag6-1.fna&oh=03_Q7cD3gHqWE2jTIITpc1eEXW4IWmtnbKHoMdWucKnTr9Iqlh95A&oe=692A385E');">
+          <img src="https://scontent.fbag6-1.fna.fbcdn.net/v/t1.15752-9/553690381_1107713891577734_3583065128957580323_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeFQg63SqBJwAAglaBNVi4D4oeQGp_SgkOyh5Aan9KCQ7PygWt2ioe1P2TSBpHqCJw2V0yltM6EGwxqMiG_gPPce&_nc_ohc=3X5nWFehrJEQ7kNvwEfwNAL&_nc_oc=AdnndQpRudrUm1rQOWfHzUF0Fo4U7n8TLzUghY-mbFdQpiTJEBPmZSAcC8F1_nxbMNU&_nc_zt=23&_nc_ht=scontent.fbag6-1.fna&oh=03_Q7cD3gHqWE2jTIITpc1eEXW4IWmtnbKHoMdWucKnTr9Iqlh95A&oe=692A385E" class="profile-img" />
+          <div class="profile-name">Jhumeila Jade P. Pimentel</div>
+          <div class="profile-role">Leader</div>
+        </div>
+        <div class="card-back">
+          <h3>Profile Info</h3>
+          <p> <a href="https://www.facebook.com/jhumeila.pimentel.3" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook" width="30" style="vertical-align: middle;">
+  Jhumeila Jade P. Pimentel
+</a> </p>
+
+          <p><strong>Age:</strong> 20</p>
+          <p><strong>Status:</strong> Single</p>
+          <p><strong>Gender:</strong> Female</p>
+          <p><strong>Address:</strong> Umingan, Pangasinan</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Member 1 -->
+    <div class="card" onclick="this.classList.toggle('is-flipped')">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('https://scontent.fbag1-2.fna.fbcdn.net/v/t1.15752-9/566531621_1912505666345706_1206925986046041494_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeGUWWmy7qrr3HLfD9H3YRcsrzQTaLvb7WivNBNou9vtaOXML949l4TvQ0cS5PnuRZhAXnpiU8UXH3L1sBwsWicH&_nc_ohc=GXboiUgmHqEQ7kNvwFn7z1R&_nc_oc=AdkD8h-EKa3i4q_5Z01fm4uKXMj_DOu-jPCuymF3ZzrG5cKHW2EAqoI2kJf1wO7BM_k&_nc_zt=23&_nc_ht=scontent.fbag1-2.fna&oh=03_Q7cD3gEgwP5yqjPAI4lQOk0HlylIT4n7_q4GGSWzrKq8iFdMtw&oe=692A3355');">
+          <img src="https://scontent.fbag1-2.fna.fbcdn.net/v/t1.15752-9/566531621_1912505666345706_1206925986046041494_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeGUWWmy7qrr3HLfD9H3YRcsrzQTaLvb7WivNBNou9vtaOXML949l4TvQ0cS5PnuRZhAXnpiU8UXH3L1sBwsWicH&_nc_ohc=GXboiUgmHqEQ7kNvwFn7z1R&_nc_oc=AdkD8h-EKa3i4q_5Z01fm4uKXMj_DOu-jPCuymF3ZzrG5cKHW2EAqoI2kJf1wO7BM_k&_nc_zt=23&_nc_ht=scontent.fbag1-2.fna&oh=03_Q7cD3gEgwP5yqjPAI4lQOk0HlylIT4n7_q4GGSWzrKq8iFdMtw&oe=692A3355" class="profile-img" />
+          <div class="profile-name">Edison Milby D. Garcia</div>
+          <div class="profile-role">Member</div>
+        </div>
+        <div class="card-back">
+          <h3>Profile Info</h3>
+          <p> <a href="https://www.facebook.com/ayson.sunxwoo" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook" width="30" style="vertical-align: middle;">
+  Edison Milby D. Garcia
+</a> </p>
+          <p><strong>Age:</strong> 20</p>
+          <p><strong>Status:</strong> Single</p>
+          <p><strong>Gender:</strong> Male</p>
+          <p><strong>Address:</strong> Sto. Tomas, Pangasinan</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Member 2 -->
+    <div class="card" onclick="this.classList.toggle('is-flipped')">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('https://scontent.fbag6-1.fna.fbcdn.net/v/t1.15752-9/573941491_1921296868823115_1755120212118012395_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeGBe1tS7LmLsPY_FzH4nZa8bvVcHr43QFVu9VwevjdAVbIaCheluIAhdD0lNFYqUzs5ScTUmxz9HX90KLHVZSG0&_nc_ohc=UbjtsOmNvrsQ7kNvwGjgmub&_nc_oc=Adm0yS3CGaPONykWLp6F9n6WCH8em-MO7u2JI5NXTnM8HQ7G4rhumD_xU8ZwDJ7uNvA&_nc_zt=23&_nc_ht=scontent.fbag6-1.fna&oh=03_Q7cD3gGynviP1UUG-Bj5Qxi5smLgUnZ62WXhy2GPGlmDMnCREg&oe=692A3AD2');">
+          <img src="https://scontent.fbag6-1.fna.fbcdn.net/v/t1.15752-9/573941491_1921296868823115_1755120212118012395_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeGBe1tS7LmLsPY_FzH4nZa8bvVcHr43QFVu9VwevjdAVbIaCheluIAhdD0lNFYqUzs5ScTUmxz9HX90KLHVZSG0&_nc_ohc=UbjtsOmNvrsQ7kNvwGjgmub&_nc_oc=Adm0yS3CGaPONykWLp6F9n6WCH8em-MO7u2JI5NXTnM8HQ7G4rhumD_xU8ZwDJ7uNvA&_nc_zt=23&_nc_ht=scontent.fbag6-1.fna&oh=03_Q7cD3gGynviP1UUG-Bj5Qxi5smLgUnZ62WXhy2GPGlmDMnCREg&oe=692A3AD2" class="profile-img" />
+          <div class="profile-name">Antonio V. De Pedro Jr.</div>
+          <div class="profile-role">Member</div>
+        </div>
+        <div class="card-back">
+          <h3>Profile Info</h3>
+          <p> <a href="https://www.facebook.com/antonio.depedro.54" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook" width="30" style="vertical-align: middle;">
+  Antonio V. De Pedro Jr.
+</a> </p>
+          <p><strong>Age:</strong> 20</p>
+          <p><strong>Status:</strong> Single</p>
+          <p><strong>Gender:</strong> Male</p>
+          <p><strong>Address:</strong> Tayug, Pangasinan</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Member 3 -->
+    <div class="card" onclick="this.classList.toggle('is-flipped')">
+      <div class="card-inner">
+        <div class="card-front" style="background-image: url('https://scontent.fbag1-2.fna.fbcdn.net/v/t1.15752-9/566629429_2056271488479387_262089112454280087_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeG0l4kp93oOVDCx_3yFtzgpfZ20P5HmZ_59nbQ_keZn_nCLu1hFWXpe0oV7R8TJ3kUBPQ_5P_0M0GOgfLSjceWf&_nc_ohc=aiiupz1t8XYQ7kNvwGWzHqI&_nc_oc=AdnqJ93NaV7QYI88FkMiRqCyiQnsqI4pMjrBdG5n3nezpxsqACPYgOXhCR0RJQhppSQ&_nc_zt=23&_nc_ht=scontent.fbag1-2.fna&oh=03_Q7cD3gFFgQw8fX-E86vtFHEFxE8m6IIMx5hnPWKu9Q_XDQB3Dg&oe=692A36CE');">
+          <img src="https://scontent.fbag1-2.fna.fbcdn.net/v/t1.15752-9/566629429_2056271488479387_262089112454280087_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeG0l4kp93oOVDCx_3yFtzgpfZ20P5HmZ_59nbQ_keZn_nCLu1hFWXpe0oV7R8TJ3kUBPQ_5P_0M0GOgfLSjceWf&_nc_ohc=aiiupz1t8XYQ7kNvwGWzHqI&_nc_oc=AdnqJ93NaV7QYI88FkMiRqCyiQnsqI4pMjrBdG5n3nezpxsqACPYgOXhCR0RJQhppSQ&_nc_zt=23&_nc_ht=scontent.fbag1-2.fna&oh=03_Q7cD3gFFgQw8fX-E86vtFHEFxE8m6IIMx5hnPWKu9Q_XDQB3Dg&oe=692A36CE" class="profile-img" />
+          <div class="profile-name">Vhera Clara M. Cabural</div>
+          <div class="profile-role">Member</div>
+        </div>
+        <div class="card-back">
+          <h3>Profile Info</h3>
+          <p> <a href="https://www.facebook.com/vhera.cabural.73" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook" width="30" style="vertical-align: middle;">
+  Vhera Clara M. Cabural
+</a> </p>
+          <p><strong>Age:</strong> 19</p>
+          <p><strong>Status:</strong> Single</p>
+          <p><strong>Gender:</strong> Female</p>
+          <p><strong>Address:</strong> Sto. Tomas, Pangasinan</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 GE-ELEC IT 2A Portfolio | Designed by Garcia
+  </footer>
+</body>
+</html>
